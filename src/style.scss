@@ -1,3 +1,23 @@
-h1 {
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid black;
+  background-image: url("./background.png");
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header {
+  height: 5vh;
+  border: 1px solid red;
+  background-color: #8cc34b;
 }
