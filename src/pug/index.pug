@@ -1,0 +1,21 @@
+doctype html
+
+html
+    include ./head.pug
+  
+    body
+        .wrapper
+            .header
+                .header__login
+                    .avatar
+                    .info 
+                        div Быстров Борис Викторович
+                        div bystrov@gmail.com
+                .header__contacts
+                    div
+                        ul.socialbut 
+                            each link, name in {GITHUB:"http://www.github.com", SKYPE:"http://www.skype.com", VK:"http://www.vk.com"}
+                                li
+                                    a.button(class= name href=link)
+
+            

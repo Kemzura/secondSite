@@ -37,7 +37,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.pug"
+      template: "./src/pug/index.pug"
     }),
     new CleanWebpackPlugin(["dist"])
   ],

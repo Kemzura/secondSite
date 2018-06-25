@@ -1,3 +1,5 @@
+@import "./fonts.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +8,7 @@
 body {
   width: 100vw;
   height: 100vh;
-  border: 1px solid black;
-  background-image: url("./background.png");
+  background-image: url("./img/background.png");
 }
 
 .wrapper {
@@ -17,7 +18,101 @@ body {
 }
 
 .header {
-  height: 5vh;
-  border: 1px solid red;
+  height: 10vh;
+  min-height: 90px;
   background-color: #8cc34b;
+  clear: both;
+}
+
+.header__login {
+  height: 100%;
+  width: 50%;
+  float: left;
+  display: flex;
+  align-items: center;
+}
+
+.header__contacts {
+  height: 100%;
+  width: 50%;
+  float: right;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin-left: 30px;
+  background: {
+    image: url("./img/avatar.jpg");
+    size: cover;
+    position: center center;
+  }
+}
+
+.info {
+  margin-left: 15px;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  div {
+    height: 50%;
+    color: white;
+  }
+  :nth-child(1) {
+    font-size: 21px;
+    font-family: "Medium";
+  }
+  :nth-child(2) {
+    margin-top: 5px;
+    font-size: 14px;
+    font-family: "Regular";
+    opacity: 0.7;
+  }
+}
+
+.header__contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.socialbut {
+  list-style-type: none;
+  //margin-right: 15px;
+  float: right;
+}
+
+li {
+  display: inline-block;
+  margin-right: 25px;
+}
+
+.button {
+  display: inline-block;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.GITHUB {
+  width: 30px;
+  height: 30px;
+  background-image: url("./img/git2.png");
+}
+
+.SKYPE {
+  width: 30px;
+  height: 31px;
+  background-image: url("./img/sk.png");
+}
+
+.VK {
+  width: 39px;
+  height: 22px;
+  background-image: url("./img/vk.png");
+  padding-bottom: 5px;
 }
