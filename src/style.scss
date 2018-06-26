@@ -22,6 +22,7 @@ body {
   min-height: 90px;
   background-color: #8cc34b;
   clear: both;
+  box-shadow: 0px 0px 30px 0px #7a7a83;
 }
 
 .header__login {
@@ -80,7 +81,6 @@ body {
 
 .socialbut {
   list-style-type: none;
-  //margin-right: 15px;
   float: right;
 }
 
@@ -115,4 +115,66 @@ li {
   height: 22px;
   background-image: url("./img/vk.png");
   padding-bottom: 5px;
+}
+
+.content {
+  min-height: 80vh;
+
+  flex-grow: 5;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  min-height: 70px;
+  background-color: #212121;
+}
+
+.footer__text {
+  max-width: 520px;
+  p {
+    text-align: center;
+    color: white;
+    opacity: 0.5;
+    font-family: "Regular";
+    font-size: 14px;
+  }
+}
+
+.content__top {
+  display: flex;
+  justify-content: center;
+  min-height: 470px;
+  border: 1px black solid;
+}
+
+.content__top__wrapper {
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+  min-height: 470px;
+  border: 1px red solid;
+}
+
+.content__top__wrapper__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 620px;
+  max-height: 100px;
+  margin-top: 50px;
+  box-sizing: border-box;
+  //border: 1px green solid;
+  h1 {
+    font-family: "Medium";
+    font-size: 42px;
+  }
+  p {
+    font-family: "Light";
+    font-size: 21px;
+    color: #727272;
+  }
 }
