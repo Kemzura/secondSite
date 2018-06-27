@@ -5,10 +5,25 @@
   padding: 0;
 }
 
+p {
+  font-family: "Light";
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: "Medium";
+}
+
+h2 {
+  font-family: "Regular";
+  font-size: 21px;
+  margin-bottom: 15px;
+}
+
 body {
   width: 100vw;
   height: 100vh;
-  background-image: url("./img/background.png");
 }
 
 .wrapper {
@@ -99,27 +114,20 @@ li {
 }
 
 .GITHUB {
-  width: 30px;
-  height: 30px;
-  background-image: url("./img/git2.png");
+  content: url("./img/git2.png");
 }
 
 .SKYPE {
-  width: 30px;
-  height: 31px;
-  background-image: url("./img/sk.png");
+  content: url("./img/sk.png");
 }
 
 .VK {
-  width: 39px;
-  height: 22px;
-  background-image: url("./img/vk.png");
+  content: url("./img/vk.png");
   padding-bottom: 5px;
 }
 
 .content {
   min-height: 80vh;
-
   flex-grow: 5;
 }
 
@@ -143,38 +151,70 @@ li {
   }
 }
 
+.content__top,
+.content__bottom {
+  display: flex;
+  justify-content: center;
+}
+
 .content__top {
-  display: flex;
-  justify-content: center;
-  min-height: 470px;
-  border: 1px black solid;
+  margin-bottom: 40px;
 }
 
-.content__top__wrapper {
+.content__top__wrapper,
+.content__bottom__wrapper {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   width: 80vw;
-  min-height: 470px;
-  border: 1px red solid;
 }
 
-.content__top__wrapper__header {
+.content__top__wrapper__header,
+.content__bottom__wrapper__header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  max-width: 620px;
-  max-height: 100px;
+  min-height: 100px;
   margin-top: 50px;
-  box-sizing: border-box;
-  //border: 1px green solid;
+  margin-bottom: 40px;
   h1 {
     font-family: "Medium";
     font-size: 42px;
+    font-weight: 200;
   }
   p {
     font-family: "Light";
     font-size: 21px;
     color: #727272;
   }
+}
+
+.content__top__wrapper__about {
+  display: flex;
+  width: 80vw;
+}
+
+.content__top__wrapper__about__aboutMe,
+.content__top__wrapper__about__expirience {
+  display: flex;
+  justify-content: space-evenly;
+  width: 40vw;
+}
+
+.content__top__wrapper__about__aboutMe__wrapper__pic {
+  content: url("./img/hello.png");
+}
+
+.content__top__wrapper__about__expirience__wrapper__pic {
+  content: url("./img/experience.png");
+}
+
+.content__top__wrapper__about__aboutMe__text,
+.content__top__wrapper__about_expirience__text {
+  width: 283px;
+}
+
+.content__bottom {
+  background-image: url("./img/background.png");
+  width: 100vw;
 }

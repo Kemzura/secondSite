@@ -1,7 +1,19 @@
 doctype html
 
+
 html
     include ./head.pug
+    -   
+     var styles = [{
+            name: "GITHUB",
+            link: "http://www.github.com"
+        },{ 
+            name: "SKYPE",
+            link: "http://www.skype.com"
+        },{
+            name: "VK",
+            link: "http://www.vk.com"
+        }];
   
     body
         .wrapper
@@ -14,18 +26,33 @@ html
                 .header__contacts
                     div
                         ul.socialbut 
-                            each link, name in {GITHUB:"http://www.github.com", SKYPE:"http://www.skype.com", VK:"http://www.vk.com"}
+                            each item in styles
                                 li
-                                    a.button(class= name href=link)
+                                    a.button(class= item.name href=item.link)
             .content
                 .content__top
                     .content__top__wrapper
                         .content__top__wrapper__header
                             h1 О будущем ученике
                             p Ребятам из Loftschool будет полезно узнать немного обо мне
+                        .content__top__wrapper__about
+                            .content__top__wrapper__about__aboutMe
+                                .content__top__wrapper__about__aboutMe__wrapper
+                                    .content__top__wrapper__about__aboutMe__wrapper__pic
+                                .content__top__wrapper__about__aboutMe__text
+                                    h2 Немного обо мне
+                                    p Я живу в Санкт-Петербурге (Россия). Мне 26 лет. Высшее образование - закончил НИУ ИТМО. Опыт в разработке 1 год. Уже окончил курсы в Академии Программирования, где не плохо научился верстать. Пока есть только один сайт, которым могу похвастаться: www.yandex.ru
+                            .content__top__wrapper__about__expirience
+                                .content__top__wrapper__about__expirience__wrapper
+                                    .content__top__wrapper__about__expirience__wrapper__pic
+                                .content__top__wrapper__about_expirience__text
+                                    h2 Мой опыт в разработке
+                                    p В этом блоке я расскажу о себе, что я уже умею. Здесь я укажу другие курсы, которые до этого я уже проходил. Могу перечислить технологии, которыми уже умею пользоваться. К примеру: html5, css3, sass, jade, git и пр.
                 .content__bottom
-                    
-                
+                    .content__bottom__wrapper
+                        .content__bottom__wrapper__header
+                            h1 Курсы на loftblog
+                            p которые мне помогут в выполнении этого задания
             .footer
                 .footer__text
                     p А это футер, с текстом внутри. Он должен быть прибит к низу окна браузера, не зависимо от количества контента на странице и размера окна.
