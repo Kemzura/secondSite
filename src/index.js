@@ -3,16 +3,16 @@ import "./style.scss";
 //import hover from "./print.js";
 //console.log(hoverDiv);
 
-let course = document.getElementsByClassName("course");
 let courseTrans = document.getElementsByClassName("course__trans");
 let hoverDiv = document.getElementsByClassName("course__hoverDiv");
-let fontH2 = document.getElementsByTagName("h2");
-
+let title = document.getElementsByClassName("title");
 let test = document.querySelectorAll("div.course__trans");
-console.log(fontH2);
-console.log(test);
 
 let length = test.length;
+
+let course = document.getElementsByClassName("course");
+let lengthCourse = course.length;
+
 //console.log(length);
 
 //let count = 1;
@@ -26,9 +26,9 @@ console.log(courseAtt);*/
 function setCount() {
   let count = 0;
   let a = [];
-  for (let i = 0; i < length; i++) {
-    courseTrans[i].setAttribute("counter", count);
-    a.push(courseTrans[i].getAttribute("counter"));
+  for (let i = 0; i < lengthCourse; i++) {
+    course[i].setAttribute("counter", count);
+    a.push(course[i].getAttribute("counter"));
     count++;
   }
   return a;
@@ -38,9 +38,72 @@ setCount();
 
 document.onmouseover = function(event) {
   let target = event.target;
+  let div = target.parentNode;
+  let divClass = div.className;
+  if (divClass === "course") {
+    let attr = div.getAttribute("counter");
+    hoverDiv[attr].style.display = "block";
+    title[attr].style.color = "#8cc34b";
+  }
+};
+
+document.onmouseout = function(event) {
+  let target = event.target;
+  let div = target.parentNode;
+  let divClass = div.className;
+  if (divClass === "course") {
+    let attr = div.getAttribute("counter");
+    hoverDiv[attr].style.display = "none";
+    title[attr].style.color = "black";
+  }
+};
+
+document.onclick = function(e) {
+  let target = event.target;
+
+  let div = target.parentNode;
+
+  let divClass = div.className;
+  let urlname = 'url("./img/clock.svg")';
+  if (divClass === "course") {
+    let attr = div.getAttribute("counter");
+    let check = document.getElementsByClassName("check");
+    let checkBox = document.getElementsByClassName("course__check__box");
+
+    /*checkBox[attr].style.background = "#8cc34b";*/
+    checkBox[attr].style.border = "2px solid #8cc34b";
+    checkBox[attr].style.backgroundImage = urlname;
+    console.log(urlname);
+    course[attr].style.background = "#edf5e3";
+    check[attr].style.background = "#e7f0db";
+  }
+};
+
+/*document.onmouseover = function(event) {
+  let target = event.target;
+  let div = target.parentNode;
+  let divClass = div.className;
+
+  if (divClass === "course") {
+    let attr = div.getAttribute("counter");
+    for (let i = 0; i < lengthCourse; i++) {
+      if (i == attr) {
+        hoverDiv[i].style.display = "block";
+        title[i].style.color = "#8cc34b";
+      } 
+    }
+  } else {
+    for (let i = 0; i < lengthCourse; i++) {
+      hoverDiv[i].style.display = "none";
+      title[i].style.color = "black";
+    }
+  }
+};*/
+
+/*document.onmouseover = function(event) {
+  let target = event.target;
   let attr = target.getAttribute("counter");
-  /*console.log(target);
-  console.log(attr);*/
+  
   for (let i = 0; i < length; i++) {
     if (i == attr) {
       hoverDiv[i].style.display = "block";
@@ -62,7 +125,7 @@ document.onmouseover = function(event) {
       }
     }
   }
-};
+};*/
 
 /*function poisk() {
   for (let i = 0; i < test.length; i++) {
