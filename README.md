@@ -1,1 +1,1 @@
-# hover with JS
+# animated courses JS

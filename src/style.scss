@@ -306,3 +306,22 @@ li {
   border-radius: 15%;
   margin: 0px 20px;
 }
+
+.title {
+  color: black;
+}
+
+.content__bottom__wrapper__course {
+  min-height: 350px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.done {
+  display: none;
+  h2 {
+    font-size: 41px;
+    color: #8cc34b;
+  }
+}
