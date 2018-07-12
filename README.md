@@ -1,1 +1,1 @@
-# animated courses JS
+# JSON info download
